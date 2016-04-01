@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -27,3 +28,6 @@ This README would normally document whatever steps are necessary to get your app
 
 * Repo owner or admin
 * Other community or team contact
+=======
+# AppVillage-Fruitiere-Numerique
+>>>>>>> 9abb7b27a05efd6dce9a6b6ef1a4144c702e4836
