@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Visite Lourmarin</string>
+    <string name="title_section_1">Visite Camus</string>
+    <string name="title_section_2">Visite Bosco</string>
+    <string name="title_section_3">Visite Village</string>
+    <string name="title_section_4">Visite Mistouflon</string>
+    <string name="title_section_5">Endroits Eloignés</string>
+
+    <string name="option_section">Options</string>
+
+    <string name="action_section_1">Prendre une photo</string>
+    <string name="action_section_2">A cinq minutes</string>
+    <string name="action_section_3">Satellite</string>
+    <string name="action_section_4">Carte</string>
+
+    <string name="title_section_english_1">Camus Visit</string>
+    <string name="title_section_english_2">Bosco Visit</string>
+    <string name="title_section_english_3">Town Visit</string>
+    <string name="title_section_english_4">Mistouflon Visit</string>
+    <string name="title_section_english_5">Distant places</string>
+
+    <string name="action_section_english_1">Take a picture</string>
+    <string name="action_section_english_2">Five minute away</string>
+    <string name="action_section_english_3">Satellite</string>
+    <string name="action_section_english_4">Map</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Visite guidée</string>
+
+    <string name="dberror">Database error</string>
+    <string name="image">image</string>
+    <string name="bla">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</string>
+    <string name="base_visite">Visite de Lourmarin</string>
+    <string name="visite_duration">Durée de la visite :</string>
+    <string name="start_visite">Commencer la visite</string>
+
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_finish">Finish</string>
+    <string name="title_template_step">Step <xliff:g id="step_number">%1$d</xliff:g>: Lorem
+        Ipsum</string>
+    <string name="action_fini">OK</string>
+    <string name="action_suivant">Suivant</string>
+    <string name="action_precedent">Précédent</string>
+    <string name="guided">Guided Tour</string>
+
+    <string name="email">contact@lafruitierenumerique.com</string>
+
+    <string name="TitleTransition">Titletransition</string>
+    <string name="ImageTransition">Imagetransition</string>
+
+    <string name="video_title">Video</string>
+    <string name="photo_title">Photo</string>
+    <string name="inside_title">Interieur</string>
+
+    <string name="saved_info_visite_RGB">info-visit-RGB</string>
+    <string name="saved_info_visite_title_text_color">info-visite-saved-title-text-color</string>
+
+    <string name="time">23h42</string>
+
+    <string name="is_first_launch">isFirstLaunch</string>
+    <string name="firstTimeIntro">Salut ! \nC\'est la première fois que l\'on se voit ! Je vais vérifier que tous les paramètres sont bon pour mon fonctionnement :</string>
+    <string name="visitTabletDirectoryIsHere">Le dossier \"VisiteTablette\" est présent :-)</string>
+    <string name="visitTabletDirectoryIsNotHere">Le dossier \"VisiteTablette\" n\'est pas présent :-(</string>
+    <string name="visitTabletPhotosphereIsHere">L\'application pour les photoshpere est présente :-)</string>
+    <string name="visitTabletPhotosphereIsNotHere">L\'application pour les photosphere n\'est pas présente :-(</string>
+    <string name="visitTabletFix">Réparer ça !</string>
+    <string name="visitTabletNoAccessToGPS">\n - au GPS :-(</string>
+    <string name="visitTabletNoAccessToStockage">\n - à la mémoire :-(</string>
+    <string name="visitTabletNoAccessToServiceGoogle">\n - au compte google :-(</string>
+    <string name="visitTabletOkay">Okay</string>
+    <string name="visitSharedPreference">visite</string>
+</resources>

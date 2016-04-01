@@ -1,0 +1,77 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/visiteCard"
+    android:layout_width="match_parent"
+    android:layout_height="625dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_margin="25dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <TextView
+        android:id="@+id/visiteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/base_visite"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="44sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:id="@+id/visiteimage1"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/chargement"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/visiteTitle"/>
+
+    <ImageView
+        android:id="@+id/visiteimage2"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/chargement"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/visiteimage3"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:contentDescription="@string/image"
+        android:layout_centerVertical="true"
+        android:src="@drawable/chargement"
+        android:layout_toStartOf="@+id/visiteTitle"/>
+
+    <TextView
+        android:id="@+id/visiteContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textSize="20sp"
+        android:text="@string/bla"
+        android:layout_margin="25dp"
+        android:layout_below="@+id/visiteimage2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/visiteDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/visite_duration"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_below="@+id/visiteTitle"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

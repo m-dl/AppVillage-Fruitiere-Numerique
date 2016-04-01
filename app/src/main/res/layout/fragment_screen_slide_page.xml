@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollText"
+        android:paddingTop="50dp"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true">
+        <TextView style="?android:textAppearanceLarge"
+            android:id="@+id/guideContent"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bla"/>
+    </ScrollView>
+
+    <VideoView
+        android:id="@+id/guideVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"/>
+
+</RelativeLayout>

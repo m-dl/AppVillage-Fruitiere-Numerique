@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/placeMainParentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/place_placemain_include_inside_cards" />
+
+        <include layout="@layout/place_placemain_include_photo_cards" />
+
+        <include layout="@layout/place_placemain_include_video_cards" />
+
+    </LinearLayout>
+
+    <include layout="@layout/place_placemain_include_text_cards" />
+
+</RelativeLayout>
