@@ -18,7 +18,7 @@ public class MyString {
     }
 
     public boolean isImage(String s) {
-        return s.contains(".jpg") || s.contains(".png") || s.contains(".jpeg") || s.contains(".JPG") || s.contains(".JPEG")|| s.contains(".PNG");
+        return s.contains(".jpg") || s.contains(".png") || s.contains(".gif") || s.contains(".bmp") ||  s.contains(".jpeg") || s.contains(".BMP") ||  s.contains(".GIF") || s.contains(".JPG") || s.contains(".JPEG")|| s.contains(".PNG");
     }
 
     public StringBuilder getStringFromFile(String location) {

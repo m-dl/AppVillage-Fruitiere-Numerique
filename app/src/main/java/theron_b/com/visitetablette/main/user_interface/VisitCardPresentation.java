@@ -74,6 +74,8 @@ public class VisitCardPresentation extends Fragment {
             if (myString.isImage(inLookImage.get(i).toString())) {
                 if (j < 3)
                     image.add(j++, new File(inLookImage.get(i).toString()));
+                else
+                    break;
             }
             ++i;
         }

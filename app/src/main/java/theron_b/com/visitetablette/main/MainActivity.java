@@ -49,6 +49,7 @@ import theron_b.com.visitetablette.R;
 import theron_b.com.visitetablette.main.google_maps.GetLocation;
 import theron_b.com.visitetablette.main.google_maps.Maps;
 import theron_b.com.visitetablette.place.PlaceMain;
+import theron_b.com.visitetablette.tool.FileManager;
 import theron_b.com.visitetablette.tool.Param;
 import theron_b.com.visitetablette.tool.TakePicture;
 import theron_b.com.visitetablette.tool.clock.Clock;
@@ -102,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         Param param = new Param();
         param.paramWindowFullScreen(getWindow());
         param.paramSetSupportActionBar(m_Toolbar, this);
+        FileManager.UpdateMedia();
         setKonamiCode();
         setDrawer();
         setTime();

@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Maxime.PC\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="C:\Users\Maxime.PC\Desktop\VisiteVillage\app\build\intermediates\pre-dexed\debug\commons-io-2.4_fa69b2852795580cf771fc5f9e843d40f41dc6e5.jar" />
+    </item>
+
+</items>

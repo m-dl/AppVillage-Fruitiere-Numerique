@@ -16,5 +16,5 @@ public class AppConstant {
 
 	// supported file formats
 	public static final List<String> FILE_EXTN = Arrays.asList("jpg", "jpeg",
-			"png");
+			"png", "gif", "bmp", "JPG", "JPEG", "PNG", "GIF", "BMP");
 }
