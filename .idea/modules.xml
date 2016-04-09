@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/VisiteVillage.iml" filepath="$PROJECT_DIR$/VisiteVillage.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/driveAPI/driveAPI.iml" filepath="$PROJECT_DIR$/driveAPI/driveAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/panoramagl/panoramagl.iml" filepath="$PROJECT_DIR$/panoramagl/panoramagl.iml" />
     </modules>
   </component>

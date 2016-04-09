@@ -1,1 +1,1 @@
-include ':app', ':panoramagl'
+include ':app', ':panoramagl', ':driveAPI'

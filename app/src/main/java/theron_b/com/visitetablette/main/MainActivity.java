@@ -2,13 +2,12 @@ package theron_b.com.visitetablette.main;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.pm.PackageManager;
-import android.support.v7.app.AlertDialog;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.location.Location;
@@ -26,6 +25,7 @@ import android.support.v4.util.Pair;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.format.Time;
@@ -35,11 +35,8 @@ import android.view.View;
 import android.view.ViewManager;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.maps.model.LatLng;
-
 import java.util.Calendar;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -54,7 +51,7 @@ import theron_b.com.visitetablette.tool.Param;
 import theron_b.com.visitetablette.tool.TakePicture;
 import theron_b.com.visitetablette.tool.clock.Clock;
 import theron_b.com.visitetablette.tool.clock.OnClockTickListner;
-
+import static theron_b.com.visitetablette.tool.ConnectionManager.isNetworkAvailable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private VisiteData m_VisiteData;
 
     private Context m_Context;
+    private static MainActivity instance;
     private Activity m_Activity;
     private FragmentManager m_FragmentManager;
 
@@ -72,6 +70,19 @@ public class MainActivity extends AppCompatActivity {
     private int m_IDFABButton;
 
     TextView m_Time;
+
+    // Constructor
+    public MainActivity() {
+        instance = this;
+    }
+
+    // Getter
+    public static Context getContext() {
+        if (instance == null) {
+            instance = new MainActivity();
+        }
+        return instance;
+    }
 
     @Bind(R.id.main_content_main)
     CoordinatorLayout m_CoordinatorLayout;
@@ -103,7 +114,9 @@ public class MainActivity extends AppCompatActivity {
         Param param = new Param();
         param.paramWindowFullScreen(getWindow());
         param.paramSetSupportActionBar(m_Toolbar, this);
-        FileManager.UpdateMedia();
+        if(isNetworkAvailable()) {
+            FileManager.UpdateMedia();
+        }
         setKonamiCode();
         setDrawer();
         setTime();
@@ -125,10 +138,10 @@ public class MainActivity extends AppCompatActivity {
                     public void onFinish() {
                         if (!CurrentState.getInstance().isM_DemoMode()) {
                             CurrentState.getInstance().setM_DemoMode(true);
-                            Toast.makeText(m_Context, "mode demo on", Toast.LENGTH_LONG).show();
+                            Toast.makeText(m_Context, "Mode demo ON", Toast.LENGTH_LONG).show();
                         } else {
                             CurrentState.getInstance().setM_DemoMode(false);
-                            Toast.makeText(m_Context, "mode demo off", Toast.LENGTH_LONG).show();
+                            Toast.makeText(m_Context, "Mode demo OFF", Toast.LENGTH_LONG).show();
                         }
                     }
                 })
@@ -345,6 +358,11 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         if (m_GetLocation != null)
            m_GetLocation.onResume();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
     }
 
     public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
