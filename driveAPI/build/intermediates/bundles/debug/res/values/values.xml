@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="titles_array">
+        <item>Create a file</item>
+        <item>Create an empty file</item>
+        <item>Create a file in App Folder</item>
+        <item>Create a folder</item>
+        <item>Retrieve metadata</item>
+        <item>Retrieve contents</item>
+        <item>Listen download progress</item>
+        <item>Edit metadata</item>
+        <item>Insert/Update custom property</item>
+        <item>Delete custom porperty</item>
+        <item>Edit contents</item>
+        <item>Pin a file to the device</item>
+        <item>Synchronous requests</item>
+        <item>Create a file with creator activity</item>
+        <item>Pick a file with opener activity</item>
+        <item>Pick a folder with opener activity</item>
+        <item>Create a file in a folder</item>
+        <item>Create a folder in a folder</item>
+        <item>List files in a folder</item>
+        <item>List files with pagination</item>
+        <item>Query text files</item>
+        <item>Query files in a folder</item>
+        <item>Query non text files</item>
+        <item>Query sorted files</item>
+        <item>Query files shared with me</item>
+        <item>Query files with \"a\" in title</item>
+        <item>Query files with custom properties</item>
+        <item>Query starred text files</item>
+        <item>Query text or html files</item>
+        <item>Listening for file changes</item>
+    </string-array>
+    <string name="app_name">Google Drive Android API Demos</string>
+    <string name="button_subscribe">Listen for Changes</string>
+    <string name="button_unsubscribe">Stop Listening for Changes</string>
+    <string name="download_progress">Download Progress:</string>
+    <string name="menu_settings">Settings</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>
