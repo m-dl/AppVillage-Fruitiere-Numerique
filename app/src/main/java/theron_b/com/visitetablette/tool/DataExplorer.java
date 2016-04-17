@@ -88,8 +88,6 @@ public class DataExplorer {
     }
 
     private File mountData(String file) {
-        //file = m_MyString.stringNormalizer(file);
-        //file = "visite-village";
         File sdcard = new File(Environment.getExternalStorageDirectory() + "/VisiteTablette/" + file);
         if (!sdcard.exists())
             return null;

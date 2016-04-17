@@ -106,7 +106,7 @@ public class Maps implements OnMapReadyCallback,
         return true;
     }
 
-    public void loadVisite(String element, boolean french, Context context) {
+    public void loadVisite(String element) {
         m_GoogleMap.clear();
         DataExplorer dataExplorer = new DataExplorer(element, m_GoogleMap);
         m_ListPlacesObjects = dataExplorer.getM_ListPlacesObjects();

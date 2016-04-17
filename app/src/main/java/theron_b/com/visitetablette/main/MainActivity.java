@@ -301,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null)
             actionBar.setTitle(title);
-        m_Maps.loadVisite(title, CurrentState.getInstance().getM_french(), m_Context);
+        m_Maps.loadVisite(title);
         if (title.equals("Endroits Eloignés") || title.equals("Distant Places")) {
             m_Maps.centerCamera(m_GetLocation.getM_CurrentLatLng(), 15);
         }

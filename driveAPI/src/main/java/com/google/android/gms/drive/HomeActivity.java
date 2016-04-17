@@ -130,12 +130,12 @@ public class HomeActivity extends BaseActivity {
                 OutputStream out = new FileOutputStream(fileToDownload);
                 byte[] buf = new byte[1024];
                 int len;
-                int bytesDownloaded = 0;
+                long bytesDownloaded = 1;
                 while((len=in.read(buf))>0){
                     // Update progress dialog with the latest progress.
                     bytesDownloaded += len;
-                    int progress = (int)(bytesDownloaded*100/bytesExpected);
-                    mProgressBar.setProgress(progress);
+                    long progress = bytesDownloaded*100/bytesExpected;
+                    mProgressBar.setProgress((int)progress);
                     // Write the file
                     out.write(buf,0,len);
                 }
@@ -161,7 +161,6 @@ public class HomeActivity extends BaseActivity {
                 finish();
                 return;
             }
-
             showMessage("Mise jour des médias réussie !");
             finish();
         }
