@@ -17,6 +17,8 @@ public class TakePicture {
 
     private Context m_Context;
     private Activity m_Activity;
+    public static String PHOTO_FOLDER = "/VisiteTablette";
+    public static File PICTURE_FOLDER = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES + PHOTO_FOLDER);
 
     public TakePicture(Activity activity) {
         m_Activity = activity;
@@ -40,16 +42,22 @@ public class TakePicture {
         }
     }
 
-        private File createImageFile() throws IOException {
-            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.FRANCE).format(new Date());
-            String imageFileName = "JPEG_" + timeStamp + "_";
-            File storageDir = Environment.getExternalStoragePublicDirectory(
-                    Environment.DIRECTORY_PICTURES);
-            return File.createTempFile(
-                    imageFileName,
-                    ".jpg",
-                    storageDir
-            );
+    private File createImageFile() throws IOException {
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.FRANCE).format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+        File storageDir = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES + PHOTO_FOLDER);
+        return File.createTempFile(
+                imageFileName,
+                ".jpg",
+                storageDir
+        );
+    }
+
+    // empty visitors pictures folder
+    public static void updateVisitorPhoto() {
+        com.google.android.gms.drive.tools.FileManager.CreateDirectory(PICTURE_FOLDER);
+        com.google.android.gms.drive.tools.FileManager.EmptyFolderContent(PICTURE_FOLDER);
     }
 
 }

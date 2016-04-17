@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main$Generated" generated="true"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res"/><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\rs\debug"/><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\debug\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res"><file name="ic_launcher" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="activity_changeevents" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\layout\activity_changeevents.xml" qualifiers="" type="layout"/><file name="activity_home" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\layout\activity_home.xml" qualifiers="" type="layout"/><file name="activity_listfiles" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\layout\activity_listfiles.xml" qualifiers="" type="layout"/><file name="activity_progress" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\layout\activity_progress.xml" qualifiers="" type="layout"/><file name="activity_home" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\menu\activity_home.xml" qualifiers="" type="menu"/><file path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\values\strings.xml" qualifiers=""><string name="menu_settings">Settings</string><string name="button_subscribe">Listen for Changes</string><string name="app_name">Google Drive Android API Demos</string><string name="download_progress">Download Progress:</string><string name="button_unsubscribe">Stop Listening for Changes</string></file><file path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res"/><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\rs\debug"/><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\debug\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res"><file name="ic_launcher" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style><style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
@@ -7,39 +7,8 @@
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
-    </style></file><file path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\values\titles.xml" qualifiers=""><string-array name="titles_array">
-        <item>Create a file</item>
-        <item>Create an empty file</item>
-        <item>Create a file in App Folder</item>
-        <item>Create a folder</item>
-        <item>Retrieve metadata</item>
-        <item>Retrieve contents</item>
-        <item>Listen download progress</item>
-        <item>Edit metadata</item>
-        <item>Insert/Update custom property</item>
-        <item>Delete custom porperty</item>
-        <item>Edit contents</item>
-        <item>Pin a file to the device</item>
-        <item>Synchronous requests</item>
-        <item>Create a file with creator activity</item>
-        <item>Pick a file with opener activity</item>
-        <item>Pick a folder with opener activity</item>
-        <item>Create a file in a folder</item>
-        <item>Create a folder in a folder</item>
-        <item>List files in a folder</item>
-        <item>List files with pagination</item>
-        <item>Query text files</item>
-        <item>Query files in a folder</item>
-        <item>Query non text files</item>
-        <item>Query sorted files</item>
-        <item>Query files shared with me</item>
-        <item>Query files with \"a\" in title</item>
-        <item>Query files with custom properties</item>
-        <item>Query starred text files</item>
-        <item>Query text or html files</item>
-        <item>Listening for file changes</item>
-    </string-array></file><file path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+    </style></file><file path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
         <!-- API 11 theme customizations can go here. -->
     </style></file><file path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- API 14 theme customizations can go here. -->
-    </style></file></source><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\rs\debug"/><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\debug\res"/></dataSet><mergedItems/></merger>
+    </style></file><file name="main" path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\main\res\layout\main.xml" qualifiers="" type="layout"/></source><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\rs\debug"/><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\Maxime.PC\Desktop\VisiteVillage\driveAPI\src\debug\res"/></dataSet><mergedItems/></merger>

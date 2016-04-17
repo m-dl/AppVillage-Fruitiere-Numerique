@@ -35,8 +35,11 @@ import android.view.View;
 import android.view.ViewManager;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Calendar;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -51,10 +54,12 @@ import theron_b.com.visitetablette.tool.Param;
 import theron_b.com.visitetablette.tool.TakePicture;
 import theron_b.com.visitetablette.tool.clock.Clock;
 import theron_b.com.visitetablette.tool.clock.OnClockTickListner;
+
 import static theron_b.com.visitetablette.tool.ConnectionManager.isNetworkAvailable;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int updateActivityNb = 0;
     private Maps m_Maps;
     private GetLocation m_GetLocation;
     private VisiteData m_VisiteData;
@@ -114,13 +119,20 @@ public class MainActivity extends AppCompatActivity {
         Param param = new Param();
         param.paramWindowFullScreen(getWindow());
         param.paramSetSupportActionBar(m_Toolbar, this);
+        // auto pin the app
+        startLockTask();
+        // empty visitors pictures folder
+        TakePicture.updateVisitorPhoto();
+        // if wifi -> try to updata media
         if(isNetworkAvailable()) {
             FileManager.UpdateMedia();
         }
-        setKonamiCode();
+        // create visits dynamically and the menu
+        FileManager.ListVisits(m_NavigationView, CurrentState.getInstance().getM_french());
+        setObjectParam();
         setDrawer();
         setTime();
-        setObjectParam();
+        setKonamiCode();
         alertDialog();
         updateValuesFromBundle(savedInstanceState);
         SharedPreferences sharedPreferences = getSharedPreferences(getResources().getString(R.string.visitSharedPreference),
@@ -176,8 +188,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int id) {
                         CurrentState.getInstance().setM_french(false);
                         m_NavigationView.getMenu().clear();
-                        m_NavigationView.inflateMenu(R.menu.navigation_view_elements_english);
-                        m_NavigationView.getMenu().addSubMenu("");
+                        FileManager.ListVisits(m_NavigationView, CurrentState.getInstance().getM_french());
                         presentTheDrawer();
                         dialog.cancel();
                     }
@@ -185,7 +196,6 @@ public class MainActivity extends AppCompatActivity {
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         CurrentState.getInstance().setM_french(true);
-                        m_NavigationView.getMenu().addSubMenu("");
                         presentTheDrawer();
                         dialog.cancel();
                     }
@@ -231,9 +241,18 @@ public class MainActivity extends AppCompatActivity {
                                     m_MenuItemSatellite = m_menuItem;
                                 }
                                 if (m_MenuItemSatellite != null) {
-                                    String MenuTitle = CurrentState.getInstance().getM_Satellite() ?
-                                            CurrentState.getInstance().getM_french() ? resources.getString(R.string.action_section_4) : resources.getString(R.string.action_section_english_4) :
-                                            CurrentState.getInstance().getM_french() ? resources.getString(R.string.action_section_3) : resources.getString(R.string.action_section_english_3);
+                                    String MenuTitle = "";
+                                    if (CurrentState.getInstance().getM_Satellite()) {
+                                        if (CurrentState.getInstance().getM_french())
+                                            MenuTitle = resources.getString(R.string.action_section_4);
+                                        else
+                                            MenuTitle = resources.getString(R.string.action_section_english_4);
+                                    } else {
+                                        if (CurrentState.getInstance().getM_french())
+                                            MenuTitle = resources.getString(R.string.action_section_3);
+                                        else
+                                            MenuTitle = resources.getString(R.string.action_section_english_3);
+                                    }
                                     m_MenuItemSatellite.setTitle(MenuTitle);
                                 }
                                 m_menuItem.setChecked(true);
@@ -253,13 +272,13 @@ public class MainActivity extends AppCompatActivity {
                 prepareVisit(title);
                 CurrentState.getInstance().setM_fragment(true);
             } else
-                Toast.makeText(m_Context, "Je ne peut accèder à la mémoire", Toast.LENGTH_LONG).show();
+                Toast.makeText(m_Context, "Je ne peux accèder à la mémoire", Toast.LENGTH_LONG).show();
         } else {
             Resources resources = getResources();
             if (title.equals(resources.getString(R.string.action_section_1)) || title.equals(resources.getString(R.string.action_section_english_1))) {
                 TakePicture takePicture = new TakePicture(m_Activity);
                 takePicture.photo();
-            } else if (title.equals(resources.getString(R.string.action_section_2)) || title.equals(resources.getString(R.string.action_section_english_1))) {
+            } else if (title.equals(resources.getString(R.string.action_section_2)) || title.equals(resources.getString(R.string.action_section_english_2))) {
                 CurrentState.getInstance().removeFragment();
                 if (m_FABButton != null)
                     m_FABButton.performClick();
@@ -356,6 +375,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
+        // reload menu if update medias - it's activity nb < 3
+        if(updateActivityNb < 3) {
+            m_NavigationView.getMenu().clear();
+            FileManager.ListVisits(m_NavigationView, CurrentState.getInstance().getM_french());
+            updateActivityNb++;
+        }
         if (m_GetLocation != null)
            m_GetLocation.onResume();
     }

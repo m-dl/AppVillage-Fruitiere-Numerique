@@ -1,11 +1,8 @@
 package theron_b.com.visitetablette.main.google_maps;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,8 +22,8 @@ import java.util.ArrayList;
 import theron_b.com.visitetablette.R;
 import theron_b.com.visitetablette.main.CurrentState;
 import theron_b.com.visitetablette.main.user_interface.MarkerCardPresentation;
-import theron_b.com.visitetablette.tool.DataExplorer;
 import theron_b.com.visitetablette.object.PlacesObject;
+import theron_b.com.visitetablette.tool.DataExplorer;
 
 public class Maps implements OnMapReadyCallback,
         GoogleMap.OnMapClickListener,
@@ -110,22 +107,9 @@ public class Maps implements OnMapReadyCallback,
     }
 
     public void loadVisite(String element, boolean french, Context context) {
-        if (!french) {
-            element = translate(element, context);
-        }
         m_GoogleMap.clear();
         DataExplorer dataExplorer = new DataExplorer(element, m_GoogleMap);
         m_ListPlacesObjects = dataExplorer.getM_ListPlacesObjects();
-    }
-
-    private String translate(String element, Context context) {
-        int i = -1;
-        while (++i < 5) {
-            if (element.equals(context.getString(R.string.title_section_english_1 + i))) {
-                element = context.getString(R.string.title_section_1 + i);
-            }
-        }
-        return element;
     }
 
     public ArrayList<PlacesObject> getM_ListPlacesObjects() {
@@ -137,7 +121,7 @@ public class Maps implements OnMapReadyCallback,
     }
 
     public void changeView(boolean enblabled) {
-        if (enblabled)
+        if (!enblabled)
             m_GoogleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         else
             m_GoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);

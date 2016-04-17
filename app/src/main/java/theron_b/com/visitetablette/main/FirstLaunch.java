@@ -71,8 +71,8 @@ public class FirstLaunch extends AppCompatActivity {
         boolean directoryExist = new File(sdcard + "/VisiteTablette").exists();
         String message =  directoryExist ? getResources().getString(R.string.visitTabletDirectoryIsHere) :
                 getResources().getString(R.string.visitTabletDirectoryIsNotHere);
-        if (!directoryExist)
-            mOkay = false;
+        //if (!directoryExist)
+        //    mOkay = false;
         mTextViewDirectory.setText(message);
     }
 

@@ -62,8 +62,8 @@ public abstract class BaseActivity extends Activity implements
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
                     .build();
+            mGoogleApiClient.connect();
         }
-        mGoogleApiClient.connect();
     }
 
     /**
@@ -84,10 +84,19 @@ public abstract class BaseActivity extends Activity implements
      */
     @Override
     protected void onPause() {
+        super.onPause();
+    }
+
+    /**
+     * Called when activity stops. Connection to Drive service needs to
+     * be disconnected as soon as an activity stops.
+     */
+    @Override
+    protected void onStop() {
         if (mGoogleApiClient != null) {
             mGoogleApiClient.disconnect();
         }
-        super.onPause();
+        super.onStop();
     }
 
     /**

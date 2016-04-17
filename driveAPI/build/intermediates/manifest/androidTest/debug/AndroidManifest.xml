@@ -13,36 +13,7 @@
         android:label="Tests for com.google.android.gms.drive.sample.demo.test"
         android:targetPackage="com.google.android.gms.drive.sample.demo.test" />
 
-    <activity android:name="com.google.android.gms.drive.sample.demo.ListFilesActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.SyncRequestsActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.RetrieveContentsActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.RetrieveContentsWithProgressDialogActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.CreateEmptyFileActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileInAppFolderActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.CreateFolderActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.EditContentsActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.EditMetadataActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileWithCreatorActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.PickFileWithOpenerActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.PickFolderWithOpenerActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.RetrieveMetadataActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.CreateFileInFolderActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.CreateFolderInFolderActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.ListFilesInFolderActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesInFolderActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.PinFileActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.events.ListenChangeEventsForFilesActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryNonTextFilesActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesSharedWithMeActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesWithAInTitleActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryStarredTextFilesActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryTextOrHtmlFilesActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.InsertUpdateCustomPropertyActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QueryFilesWithCustomPropertyActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.DeleteCustomPropertyActivity" />
-    <activity android:name="com.google.android.gms.drive.sample.demo.QuerySortedFilesActivity" />
+    <activity android:name="com.google.android.gms.drive.sample.demo.HomeActivity" />
 
     <application>
         <uses-library android:name="android.test.runner" />

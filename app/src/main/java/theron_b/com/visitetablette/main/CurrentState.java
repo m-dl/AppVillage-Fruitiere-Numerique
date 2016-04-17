@@ -30,6 +30,7 @@ public class CurrentState {
         m_fragment = false;
         m_smallcard = false;
         m_DemoMode = false;
+        m_Satellite = true;
         m_RGB = null;
     }
 

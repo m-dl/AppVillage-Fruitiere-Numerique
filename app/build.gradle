@@ -48,6 +48,7 @@ dependencies {
         exclude group: 'org.apache.httpcomponents'
         exclude group: 'org.apache.httpcomponents', module: 'httpclient'
     }
+    compile project(':driveAPI')
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.google.android.gms:play-services:8.4.0'
     compile 'com.android.support:support-v4:23.1.1'
@@ -63,5 +64,4 @@ dependencies {
     compile 'com.google.android.gms:play-services-gcm:8.4.0'
     compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
     compile 'com.google.http-client:google-http-client-android:1.21.0'
-    compile project(':driveAPI')
 }

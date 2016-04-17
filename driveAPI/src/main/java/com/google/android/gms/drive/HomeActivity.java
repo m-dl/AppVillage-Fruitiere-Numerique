@@ -26,14 +26,13 @@ import com.google.android.gms.drive.query.Filters;
 import com.google.android.gms.drive.query.Query;
 import com.google.android.gms.drive.query.SearchableField;
 import com.google.android.gms.drive.sample.demo.R;
+import com.google.android.gms.drive.tools.FileManager;
+import com.google.android.gms.drive.tools.ZipManager;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-
-import theron_b.com.visitetablette.tool.FileManager;
-import theron_b.com.visitetablette.tool.ZipManager;
 
 /**
  * Query file with given title and download it
@@ -61,11 +60,6 @@ public class HomeActivity extends BaseActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
     public void onConnected(Bundle connectionHint) {
         super.onConnected(connectionHint);
         bytesExpected = 1;
@@ -86,11 +80,30 @@ public class HomeActivity extends BaseActivity {
                         mTextView.setText(mTextView.getText() + "\n" + "Erreur lors de la récupération du résultat.");
                         return;
                     }
-                    bytesExpected = (int) result.getMetadataBuffer().get(0).getFileSize();
-                    mFileId = result.getMetadataBuffer().get(0).getDriveId();
-                    DriveFile file = mFileId.asDriveFile();
-                    mTextView.setText(mTextView.getText() + "\n" + "Téléchargement et mise à jour sur la tablette en cours en cours ...");
-                    new UpdateMediaAsyncTask(HomeActivity.this).execute(file);
+                    if(result.getMetadataBuffer().getCount() != 0) {
+                        bytesExpected = (int) result.getMetadataBuffer().get(0).getFileSize();
+                        mFileId = result.getMetadataBuffer().get(0).getDriveId();
+                        DriveFile file = mFileId.asDriveFile();
+                        File tmpDevice = new File(DIR_FOR_DOWNLOADS + VILLAGE_MEDIAS);
+                        long deviceDate = 0;
+                        long driveDate = result.getMetadataBuffer().get(0).getCreatedDate().getTime();
+                        if (FileManager.Exist(tmpDevice))
+                            deviceDate = tmpDevice.lastModified();
+                        result.release();
+                        if (FileManager.CompareNumbers(deviceDate, driveDate)) {
+                            mTextView.setText(mTextView.getText() + "\n" + "Téléchargement et mise à jour sur la tablette en cours ...");
+                            new UpdateMediaAsyncTask(HomeActivity.this).execute(file);
+                        } else {
+                            showMessage("Les médias sont déjà à jour !");
+                            finish();
+                            return;
+                        }
+                    } else {
+                        result.release();
+                        showMessage("Aucun média trouvé, veuillez réessayer plus tard, ou mettre le Drive à jour !");
+                        finish();
+                        return;
+                    }
                 }
             };
 
@@ -143,10 +156,12 @@ public class HomeActivity extends BaseActivity {
 
         @Override
         protected void onPostExecute(Boolean result) {
-            if (!result) {
-                mTextView.setText(mTextView.getText() + "\n" + "Erreur lors du téléchargement.");
+            if(!result) {
+                showMessage("Erreur lors du téléchargement - les médias n'ont pas été mis à jour.");
+                finish();
                 return;
             }
+
             showMessage("Mise jour des médias réussie !");
             finish();
         }

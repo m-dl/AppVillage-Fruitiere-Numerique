@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\Maxime.PC\Desktop\VisiteVillage\app\build\intermediates\exploded-aar\VisiteVillage\driveAPI\unspecified\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6dd868ec915543455427ba30ac604c4a2f98bdd6">
-        <dex dex="C:\Users\Maxime.PC\Desktop\VisiteVillage\app\build\intermediates\transforms\dex\debug\folders\1000\4\VisiteVillage-driveAPI-unspecified_0b7faa63d4e9a444fe22c5e38214d7e8e47a5121\classes.dex" />
-    </item>
-
-</items>
