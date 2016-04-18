@@ -48,7 +48,7 @@ public class DataExplorer {
                         e.printStackTrace();
                         continue;
                     }
-                    addMarker(Content, googleMap, m_fileList.get(i).toString());
+                    addMarker(Content, googleMap, m_fileList.get(i).toString(), m_fileList.get(i).getName());
                 } else {
                     m_ListPlacesObjects.add(new PlacesObject("visite-overview", m_fileList.get(i).toString()));
                 }
@@ -58,16 +58,26 @@ public class DataExplorer {
         }
     }
 
-    private void addMarker(StringBuilder content, GoogleMap googleMap, String path) {
+    private void addMarker(StringBuilder content, GoogleMap googleMap, String path, String title) {
         String[] line = content.toString().split("\n");
-        String title = line[0];
-        String[] position = line[1].split(",");
+        int index = 0;
+        // two lines maximum
+        boolean b = true;
+        // if first line is not coords - it's the name of the visit - compatibility with old media
+        if(!FileManager.ParseCoordinates(line[index])) {
+            index++;
+            b = false;
+        }
+        String[] position = line[index].split(",");
         Double Lat = Double.parseDouble(position[0]);
         Double Lng = Double.parseDouble(position[1]);
         int rayon = 25;
-        if (line.length > 2) {
-            if (line[2].charAt(0) >= '0' && line[2].charAt(0) <= '9') {
-                rayon = Integer.parseInt(line[2]);
+        int j = 1;
+        if(!b)
+            j++;
+        if(line.length > j) {
+            if (line[j].charAt(0) >= '0' && line[j].charAt(0) <= '9') {
+                rayon = Integer.parseInt(line[j]);
             }
         }
         m_ListPlacesObjects.add(new PlacesObject(title, path, rayon));

@@ -10,6 +10,8 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import theron_b.com.visitetablette.R;
 import theron_b.com.visitetablette.main.MainActivity;
@@ -18,6 +20,10 @@ import theron_b.com.visitetablette.main.MainActivity;
  * Created by Maxime
  */
 public class FileManager {
+
+    public static final Pattern GPS = Pattern.compile(
+            "([+-]?\\d+\\.?\\d+)\\s*,\\s*([+-]?\\d+\\.?\\d+)",
+            Pattern.CASE_INSENSITIVE);
 
     public static File SD_CARD = Environment.getExternalStorageDirectory();
     public static String MEDIA_PATH = "/VisiteTablette";
@@ -90,6 +96,17 @@ public class FileManager {
             return s.substring(s.indexOf("_-_"), s.length());
         else
             return s.substring(s.indexOf("_-_"), s.length());
+    }
+
+    // Parse GPS coordinates
+    public static boolean ParseCoordinates(String input) {
+        Matcher matcher = GPS.matcher(input);
+        boolean isMatch = matcher.matches();
+
+        if(!isMatch) {
+            return false;
+        }
+        return true;
     }
 
 }
