@@ -65,7 +65,6 @@ public class MarkerCardPresentation extends Fragment{
         }
     }
 
-
     public String getTime() {
         if (m_Distance != null) {
             int time = Math.round(m_Distance / (400.0f / 6.0f));

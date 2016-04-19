@@ -207,6 +207,21 @@ public class PlaceMain extends AppCompatActivity {
         m_Speaker.destroy();
     }
 
+    @Override
+        protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
     public void onClickInside(View view) {
 //        Intent intent = new Intent(m_Activity, MultipleGallery.class);
 //        intent.putExtra("directory", m_PlacesObject.getM_Path() + "/" + "Interieur");

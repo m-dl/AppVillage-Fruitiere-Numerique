@@ -31,7 +31,8 @@ public class VisiteData {
         user_position.setVisibility(View.INVISIBLE);
         info.setVisibility(View.INVISIBLE);
         MyFragmentTransaction myFragmentTransaction = new MyFragmentTransaction(visitCardPresentation, fragmentManager);
-        myFragmentTransaction.run();
+        if(myFragmentTransaction != null)
+            myFragmentTransaction.run();
     }
 
     private PlacesObject getOverviewInfo() {

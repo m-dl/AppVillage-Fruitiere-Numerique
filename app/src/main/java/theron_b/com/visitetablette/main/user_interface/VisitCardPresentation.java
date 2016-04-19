@@ -30,7 +30,6 @@ public class VisitCardPresentation extends Fragment {
 
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         m_View = inflater.inflate(R.layout.main_fragment_visit_card, container, false);

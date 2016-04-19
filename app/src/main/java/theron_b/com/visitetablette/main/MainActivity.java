@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                 Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
             m_GetLocation = new GetLocation(m_Context, true, m_Maps);
         else
-            Toast.makeText(m_Context, "Je ne peut pas accèder au GPS", Toast.LENGTH_LONG).show();
+            Toast.makeText(m_Context, "Je ne peux pas accèder au GPS", Toast.LENGTH_LONG).show();
         m_Maps.setLocation(m_GetLocation);
         m_IDFABButton = View.generateViewId();
         m_DrawerToggle = new ActionBarDrawerToggle(this, m_DrawerLayout, 0, 0);
