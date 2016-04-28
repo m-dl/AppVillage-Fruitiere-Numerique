@@ -35,6 +35,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
+ * Created by Maxime
  * Query file with given title and download it
  */
 public class HomeActivity extends BaseActivity {
@@ -59,6 +60,7 @@ public class HomeActivity extends BaseActivity {
         mProgressBar.setMax(100);
     }
 
+    // if connected to drive account, start the tasks
     @Override
     public void onConnected(Bundle connectionHint) {
         super.onConnected(connectionHint);
@@ -72,6 +74,7 @@ public class HomeActivity extends BaseActivity {
                 .setResultCallback(metadataCallback);
     }
 
+    // callback result
     final private ResultCallback<DriveApi.MetadataBufferResult> metadataCallback =
             new ResultCallback<DriveApi.MetadataBufferResult>() {
                 @Override
@@ -107,6 +110,7 @@ public class HomeActivity extends BaseActivity {
                 }
             };
 
+    // Update the medias, async task
     public class UpdateMediaAsyncTask extends ApiClientAsyncTask<DriveFile, Void, Boolean> {
 
         public UpdateMediaAsyncTask(Context context) {

@@ -91,13 +91,6 @@ public class FileManager {
         }
     }
 
-    public static String TranslateFREN(boolean french, String s) {
-        if(french)
-            return s.substring(s.indexOf("_-_"), s.length());
-        else
-            return s.substring(s.indexOf("_-_"), s.length());
-    }
-
     // Parse GPS coordinates
     public static boolean ParseCoordinates(String input) {
         Matcher matcher = GPS.matcher(input);

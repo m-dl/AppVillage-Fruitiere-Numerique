@@ -103,7 +103,7 @@ public class GetLocation implements
         m_CurrentLocation = location;
         m_CurrentLatLng = new LatLng(m_CurrentLocation.getLatitude(), m_CurrentLocation.getLongitude());
         m_LastUpdateTime = DateFormat.getTimeInstance().format(new Date());
-        if (!m_CameraCentered) {
+        if (!m_CameraCentered && m_Maps != null) {
             m_Maps.centerCamera(m_CurrentLatLng);
             m_CameraCentered = true;
         }

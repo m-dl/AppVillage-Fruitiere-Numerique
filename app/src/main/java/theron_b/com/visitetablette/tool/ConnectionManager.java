@@ -11,6 +11,7 @@ import theron_b.com.visitetablette.main.MainActivity;
  */
 public class ConnectionManager {
 
+    // check if network is available
     public static boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) MainActivity.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
